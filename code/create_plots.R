@@ -59,7 +59,7 @@ demo_compare_plot <- plot_df %>%
 
 #Caption the plot and save
 ggsave(
-  filename = 'plots/demo_compare.png',
+  filename = 'docs/plots/demo_compare.png',
   plot = caption_plot(demo_compare_plot, "Source: ACS 5 year survey 2023", "Jordan Upton"),
   width = 10.5,
   height = 7,
@@ -95,7 +95,7 @@ race_trend_plot <- race_trend %>%
 
 #Caption the plot and save
 ggsave(
-  filename = 'plots/race_trend.png',
+  filename = 'docs/plots/race_trend.png',
   plot = caption_plot(race_trend_plot, "Source: ACS 1 year survey 2005-2023", "Jordan Upton"),
   width = 10.5,
   height = 7,
