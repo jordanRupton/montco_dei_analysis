@@ -43,7 +43,7 @@ demo_compare_plot <- plot_df %>%
   #           position = position_dodge(width = 0.9),
   #           vjust = -1.5)+
   #Labels with the index
-  geom_text(aes(label = index), fontface = 'bold') + 
+  geom_text(aes(y = 0, label = index), fontface = 'bold', vjust = -1) + 
   facet_wrap(vars(metric), 
              ncol = 1,
              scales = 'free') + 
@@ -61,9 +61,9 @@ demo_compare_plot <- plot_df %>%
 ggsave(
   filename = 'plots/demo_compare.png',
   plot = caption_plot(demo_compare_plot, "Source: ACS 5 year survey 2023", "Jordan Upton"),
-  width = 10,
-  height = 8,
-  dpi = 300
+  width = 10.5,
+  height = 7,
+  dpi = 500
 )
 
 
@@ -97,7 +97,7 @@ race_trend_plot <- race_trend %>%
 ggsave(
   filename = 'plots/race_trend.png',
   plot = caption_plot(race_trend_plot, "Source: ACS 1 year survey 2005-2023", "Jordan Upton"),
-  width = 10,
-  height = 8,
+  width = 10.5,
+  height = 7,
   dpi = 300
 )
