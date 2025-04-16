@@ -1,0 +1,61 @@
+---
+title: "Montgomery County Employee Demographic Analysis"
+author: "Jordan Upton"
+date: "April 2025"
+format: 
+  revealjs:
+    theme: simple
+title-slide-attributes:
+  data-background-image: /images/montco_logo.jpg
+  data-background-size: contain
+  data-background-opacity: "0.5"
+editor: visual
+---
+
+
+
+```{r}
+#Do we need to create data?
+if(length(list.files('data/')) == 0){
+  source('code/create_data.R')
+}
+
+#Do we need to create plots?
+if(length(list.files('plots/')) == 0){
+  source('code/create_plots.R')
+}
+
+
+```
+
+## Demographic Comparison
+
+Here's a plot:
+
+https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position
+
+
+## County Trends
+
+80% of employees are white, which is representative of where the county was 10 years ago
+
+
+## Next Steps
+
+::: {.incremental}
+-   examine more demographic factors (ethnicity, orientation)
+-   look into employee trends over time
+-   Intersectionality & covariance (e.g. GIVEN the age composition or geographic composition of employees, what SHOULD we expect?)
+:::
+
+## Notes
+
+A few other things to mention
+
+::: {.incremental}
+-   Created using R (ggplot2, Quarto)
+-   Slides & plots created with code: reproducible & repeatable 
+-   Posted to Github: backup, transparency & confidence
+:::
+
+
