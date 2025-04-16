@@ -1,18 +1,20 @@
 ---
 title: "Montgomery County Employee Demographic Analysis"
 author: "Jordan Upton"
-date: "April 2025"
+date: "April 24, 2025"
 format: 
   revealjs:
     theme: simple
+    footer: |
+      <div class="footer-center">
+        <a href="https://github.com/jordanRupton/montco_dei_analysis" target="_blank">MontCo Employee Analysis</a>
+      </div>
 title-slide-attributes:
   data-background-image: /images/montco_logo.jpg
   data-background-size: contain
   data-background-opacity: "0.5"
 editor: visual
 ---
-
-
 
 ```{r}
 #Do we need to create data?
@@ -28,34 +30,40 @@ if(length(list.files('plots/')) == 0){
 
 ```
 
-## Demographic Comparison
+## Agenda
 
-Here's a plot:
+-   Comparison of county employees vs population
+-   Trends in county demographics
+-   Additional analysis ideas
+-   Technical notes
 
-https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position
+## 
 
+![](plots/demo_compare.png)
 
-## County Trends
+## 
 
-80% of employees are white, which is representative of where the county was 10 years ago
-
+![](plots/race_trend.png)
 
 ## Next Steps
 
-::: {.incremental}
--   examine more demographic factors (ethnicity, orientation)
--   look into employee trends over time
--   Intersectionality & covariance (e.g. GIVEN the age composition or geographic composition of employees, what SHOULD we expect?)
+This is a preliminary analysis, further research could include:
+
+::: incremental
+-   Examining additional demographic factors
+-   Analyzing employee trends over time
+-   Accounting for intersectionality/covariance
 :::
 
-## Notes
+## Technical Notes
 
-A few other things to mention
+-   Data & plots created with [R](https://www.r-project.org/)
+    -   Packages: [tidyverse](https://cran.r-project.org/web/packages/tidyverse/index.html), [tidycensus](https://cran.r-project.org/web/packages/tidycensus/index.html), [ggthemes](https://cran.r-project.org/web/packages/ggthemes/index.html), [gridExtra](https://cran.r-project.org/web/packages/gridExtra/index.html)
+-   Slides created with code using [Quarto](https://quarto.org/)
+    -   Repeatable & Reproducible
+-   Posted to [Github](https://github.com/jordanRupton/montco_dei_analysis)
+    -   Provides backup & transparency; shows confidence
 
-::: {.incremental}
--   Created using R (ggplot2, Quarto)
--   Slides & plots created with code: reproducible & repeatable 
--   Posted to Github: backup, transparency & confidence
-:::
+![](images/Rlogo.png){.absolute bottom="0" left="0" width="200" height="155"} ![](images/quarto.png){.absolute bottom="54" left="calc(50% - 100px)" width="200" height="48"} ![](images/github.png){.absolute bottom="0" right="0" width="155" height="155"}
 
-
+## Thank you!
