@@ -2,6 +2,8 @@
 title: "Montgomery County Employee Demographic Analysis"
 author: "Jordan Upton"
 date: "April 24, 2025"
+project:
+  output-dir: docs
 format: 
   revealjs:
     theme: simple
