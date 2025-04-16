@@ -1,0 +1,70 @@
+---
+title: "Montgomery County Employee Demographic Analysis"
+author: "Jordan Upton"
+date: "April 24, 2025"
+format: 
+  revealjs:
+    theme: simple
+    self-contained: true
+    footer: |
+      <div class="footer-center">
+        <a href="https://github.com/jordanRupton/montco_dei_analysis" target="_blank">MontCo Employee Analysis</a>
+      </div>
+title-slide-attributes:
+  data-background-image: /images/montco_logo.jpg
+  data-background-size: contain
+  data-background-opacity: "0.5"
+editor: visual
+---
+
+```{r}
+#Do we need to create data?
+if(length(list.files('data/')) == 0){
+  source('code/create_data.R')
+}
+
+#Do we need to create plots?
+if(length(list.files('docs/plots/')) == 0){
+  source('code/create_plots.R')
+}
+
+
+```
+
+## Agenda
+
+-   Comparison of county employees vs population
+-   Trends in county demographics
+-   Additional analysis ideas
+-   Technical notes
+
+## 
+
+![](docs/plots/demo_compare.png)
+
+## 
+
+![](docs/plots/race_trend.png)
+
+## Next Steps
+
+This is a preliminary analysis, further research could include:
+
+::: incremental
+-   Examining additional demographic factors
+-   Analyzing employee trends over time
+-   Accounting for intersectionality/covariance
+:::
+
+## Technical Notes
+
+-   Data & plots created with [R](https://www.r-project.org/)
+    -   Packages: [tidyverse](https://cran.r-project.org/web/packages/tidyverse/index.html), [tidycensus](https://cran.r-project.org/web/packages/tidycensus/index.html), [ggthemes](https://cran.r-project.org/web/packages/ggthemes/index.html), [gridExtra](https://cran.r-project.org/web/packages/gridExtra/index.html)
+-   Slides created with code using [Quarto](https://quarto.org/)
+    -   Repeatable & Reproducible
+-   Posted to [Github](https://github.com/jordanRupton/montco_dei_analysis)
+    -   Provides backup & transparency; shows confidence
+
+![](docs/images/Rlogo.png){.absolute bottom="0" left="0" width="200" height="155"} ![](docs/images/quarto.png){.absolute bottom="54" left="calc(50% - 100px)" width="200" height="48"} ![](docs/images/github.png){.absolute bottom="0" right="0" width="155" height="155"}
+
+## Thank you!
